@@ -8,17 +8,6 @@
   --bg-primary: #FBFBFB;
   --bg-secondary: #EEF5FF;
   --border-white-5: rgba(255, 255, 255, 0.5);
-  --footer-bg-black: #679186;
-  --footer-text-white: #155ECB;
-  --footer-text-white-hover: rgba(255, 255, 255, 0.7);
-  --scroll-text-white: #fff;
-  --scroll-bg-black: #000;
-  --social-text-white: #fff;
-  --social-text-white-hover: #679186;
-  --social-bg-black: #fff;
-  --social-bg-black-hover: #fff;
-  --social-border: #fff;
-  --social-border-hover:#fff;
 }
 
 .fixed-top {
@@ -99,17 +88,17 @@
 
 .scrollTop {
   position: fixed;
-  right: 50px;
+  right: 60px;
   bottom: 20px;
   z-index: 99;
-  padding: 15px;
   opacity: 0;
   transition: all 0.4s ease-in-out 0s;
   border-radius: 4px;
 }
 .scrollTop a {
-  font-size: 16px;
-  line-height: 20px;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
   color: var(--header-text-black);
   z-index: 999;
   position: relative;
@@ -130,7 +119,7 @@
     bottom: 10px;
   }
   .scrollTop a {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 }
 @media (max-width: 996px) {

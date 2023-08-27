@@ -6,7 +6,7 @@
 @import url("../css/header.css");
 
 
-$font-stack: 'circular_stdbook',  sans-serif;
+$font-stack: 'circular_stdbook';
 
 :root {
   --body-bg: #fff;
@@ -414,6 +414,8 @@ button {
         flex-direction: column;
         height: auto;
         color: #373737;
+        font-size: 14px;
+        line-height: 16px;
       }
 
       img {
@@ -1768,7 +1770,7 @@ button {
           right: 0;
           width: 100%;
           height: auto;
-          padding: 25px 35px;
+          padding: 20px 30px;
           opacity: 0;
           transition: all 0.4s;
           cursor: pointer;
@@ -1776,10 +1778,10 @@ button {
           p {
             color: #373737;
             font-family: Circular Std;
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 450;
-            line-height: 164%; /* 32.8px */
+            line-height: 150%; /* 32.8px */
             letter-spacing: -0.6px;
           }
         }
@@ -1855,7 +1857,7 @@ button {
 }
 
 
-@media (max-width: 1366px) {
+@media (min-width: 1200px) and (max-width: 1366px) {
 
   .middle-section .slider-section .slider-inner .owl-nav .owl-next {
     display: none;
@@ -1863,6 +1865,61 @@ button {
 
   .middle-section .slider-section .slider-inner .owl-nav .owl-prev {
    display: none;
+  }
+
+  // new banner css
+  .middle-section {
+    padding-top: 70px !important;
+
+    .banner-section {
+      padding: 100px 0 180px 0;
+      width: 100%; 
+  
+      .banner-inner {
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        position: relative;
+  
+        .brand-logo {
+          max-width: 180px;
+        }
+    
+        h3 {
+          font-size: 120px;
+          font-style: normal;
+          line-height: 100%; /* 377.4px */
+        }
+    
+        h1 {
+          font-size: 36px;
+          line-height: 160%;
+          max-width: 860px;
+        }
+      }
+  
+      .banner-btn-div {
+        margin-top: 60px;
+      }
+  
+      .scroll-dwon {
+        bottom: -40px;
+        right: 30px;
+
+        img {
+          width: 8px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .approch-section {
+      padding: 100px 0;
+    }
+  }
+
+  .scrollTop { 
+    right: 30px;
   }
   
 }

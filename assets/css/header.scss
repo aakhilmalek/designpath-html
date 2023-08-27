@@ -12,21 +12,9 @@
 
     --border-white-5: rgba(255, 255, 255, 0.5);
 
-    --footer-bg-black: #679186;
-    --footer-text-white: #155ECB;
-    --footer-text-white-hover: rgba(255, 255, 255, 0.7);
-
-    --scroll-text-white: #fff;
-    --scroll-bg-black: #000;
-
-    --social-text-white: #fff;
-    --social-text-white-hover: #679186;
-
-    --social-bg-black: #fff;
-    --social-bg-black-hover: #fff;
-
-    --social-border: #fff;
-    --social-border-hover:#fff;
+    // --footer-bg-black: #679186;
+    // --footer-text-white: #155ECB;
+    // --footer-text-white-hover: rgba(255, 255, 255, 0.7);
 }
 
 .fixed-top {
@@ -40,10 +28,7 @@
     height: 70px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-
 .header {
-    // height: 70px;
     position: relative;
 
     .navbar {
@@ -130,18 +115,18 @@
 
 .scrollTop {
     position: fixed;
-    right: 50px;
+    right: 60px;
     bottom: 20px;
     z-index: 99;
-    // background-color: var(--scroll-bg-black);
-    padding: 15px;
+    // padding: 15px;
     opacity: 0;
     -webkit-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
     border-radius: 4px;
     a {
-        font-size: 16px;
-        line-height: 20px;
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
         color: var(--header-text-black);
         z-index: 999;
         position: relative;
@@ -165,7 +150,7 @@
         bottom: 10px;
 
         a {
-            font-size: 12px;
+            font-size: 12px !important;
         }
     }
 }

@@ -14,7 +14,7 @@
 body {
   background-color: var(--body-bg);
   color: var(--text-color);
-  font-family: "circular_stdbook", sans-serif !important;
+  font-family: "circular_stdbook" !important;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -339,7 +339,8 @@ button {
   font-weight: 700;
   line-height: 100%; /* 377.4px */
   letter-spacing: -5.1px;
-  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
 }
 .middle-section .banner-section .banner-inner h1 {
   color: #373737;
@@ -373,16 +374,36 @@ button {
   flex-direction: column;
   height: auto;
   color: #373737;
+  font-size: 14px;
+  line-height: 16px;
 }
 .middle-section .banner-section .scroll-dwon img {
   width: 15px;
   height: auto;
   transform-style: preserve-3d;
-  animation-name: home-arrow-down;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: home-arrow-down;
+          animation-name: home-arrow-down;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   padding-bottom: 30px;
+}
+@-webkit-keyframes home-arrow-down {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    transform: translate3d(0, 5px, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
 }
 @keyframes home-arrow-down {
   from {
@@ -760,6 +781,7 @@ button {
   border: 1px solid #93BAF1;
   border-radius: 6px;
   margin-left: auto;
+  position: -webkit-sticky;
   position: sticky;
   top: 70px;
 }
@@ -1442,7 +1464,7 @@ button {
     right: 0;
     width: 100%;
     height: auto;
-    padding: 25px 35px;
+    padding: 20px 30px;
     opacity: 0;
     transition: all 0.4s;
     cursor: pointer;
@@ -1450,10 +1472,10 @@ button {
   .middle-section .work-card .work-img .work-hover p {
     color: #373737;
     font-family: Circular Std;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 450;
-    line-height: 164%; /* 32.8px */
+    line-height: 150%; /* 32.8px */
     letter-spacing: -0.6px;
   }
   .middle-section .work-card .work-img:hover .work-hover {
@@ -1506,12 +1528,55 @@ button {
     min-height: unset;
   }
 }
-@media (max-width: 1366px) {
+@media (min-width: 1200px) and (max-width: 1366px) {
   .middle-section .slider-section .slider-inner .owl-nav .owl-next {
     display: none;
   }
   .middle-section .slider-section .slider-inner .owl-nav .owl-prev {
     display: none;
+  }
+  .middle-section {
+    padding-top: 70px !important;
+  }
+  .middle-section .banner-section {
+    padding: 100px 0 180px 0;
+    width: 100%;
+  }
+  .middle-section .banner-section .banner-inner {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .middle-section .banner-section .banner-inner .brand-logo {
+    max-width: 180px;
+  }
+  .middle-section .banner-section .banner-inner h3 {
+    font-size: 120px;
+    font-style: normal;
+    line-height: 100%; /* 377.4px */
+  }
+  .middle-section .banner-section .banner-inner h1 {
+    font-size: 36px;
+    line-height: 160%;
+    max-width: 860px;
+  }
+  .middle-section .banner-section .banner-btn-div {
+    margin-top: 60px;
+  }
+  .middle-section .banner-section .scroll-dwon {
+    bottom: -40px;
+    right: 30px;
+  }
+  .middle-section .banner-section .scroll-dwon img {
+    width: 8px;
+    padding-bottom: 30px;
+  }
+  .middle-section .approch-section {
+    padding: 100px 0;
+  }
+  .scrollTop {
+    right: 30px;
   }
 }
 /* ----------- iPad Pro ----------- */
@@ -1525,11 +1590,26 @@ button {
   /* ----------- No css ----------- */
 }
 .slidUp-animation {
-  animation-name: slideUp;
-  animation-duration: 0.4s;
-  animation-iteration-count: unset;
-  animation-timing-function: linear;
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-iteration-count: unset;
+          animation-iteration-count: unset;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   transform-style: preserve-3d;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    transform: translateY(15%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
